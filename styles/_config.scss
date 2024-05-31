@@ -11,19 +11,16 @@ $secondary-font-family: "Orbitron", sans-serif;
 //!color:
 $primary-color: lighten(rgb(0,0,0), 10%);
 $secondary-color: rgb(255,99,71);
-$bg-color: rgb(255,250,250);
+$bg-color: lighten(rgb(230,230,250), 1%);
 
 
 //*Functions*//
 
 //! mixin
-@mixin flex($justify, $direction, $basis, $wrap) {
+@mixin flex($justify) {
     display: flex;
     align-items: center;
     justify-content: $justify;
-    flex-direction: $direction;
-    flex-basis: $basis;
-    flex-wrap: $wrap;
 }
 
 //! Margin and Padding
@@ -56,6 +53,7 @@ $spaceAmounts: (1, 2, 3, 4, 5);
 body {
     background-color: $bg-color;
     font-family: $primary-font-family;
-    font-size: 20px;
+    font-size: 40px;
     height: 100vh;
+    @include flex(center);
 }
