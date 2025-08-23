@@ -1,4 +1,4 @@
-//*Variables*//
+//*Fonts*//
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -11,7 +11,7 @@ $secondary-font-family: "Orbitron", sans-serif;
 //!color:
 $primary-color: lighten(rgb(0,0,0), 10%);
 $secondary-color: rgb(255,99,71);
-$bg-color: lighten(rgb(230,230,250), 1%);
+$bg-color: rgb(230,230,250);
 
 
 //*Functions*//
@@ -21,39 +21,4 @@ $bg-color: lighten(rgb(230,230,250), 1%);
     display: flex;
     align-items: center;
     justify-content: $justify;
-}
-
-//! Margin and Padding
-$spaceAmounts: (1, 2, 3, 4, 5);
-
-@each $space in $spaceAmounts {
-    .margin-#{$space} {
-        margin: #{$space}rem;
-    }
-    .marginY-#{$space} {
-        margin: #{$space}rem 0;
-    }
-
-    .padding-#{$space} {
-        margin: #{$space}rem;
-    }
-    .paddingY-#{$space} {
-        margin: #{$space}rem 0;
-    }
-}
-
-
-//* General Styles */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: $bg-color;
-    font-family: $primary-font-family;
-    font-size: 40px;
-    height: 100vh;
-    @include flex(center);
 }

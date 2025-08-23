@@ -1,19 +1,154 @@
 @import "config";
 
+//* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: $primary-font-family;
+  font-size: 40px;
+  height: 100vh;
+  @include flex(center);
+}
+
 .clock {
-    @include flex(center);
-    background-color: white;
-    height: 600px;
-    width: 600px;
+  @include flex(center);
+  position: relative;
+  background-color: white;
+  height: clamp(500px, 50vw, 1000px);
+  width: clamp(500px, 50vw, 1000px);
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 20px 20px 70px -10px inset,
+    rgba(0, 0, 0, 0.3) 10px 10px 25px;
+  border: 15px solid $primary-color;
+
+  .clock-center {
+    position: absolute;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-     box-shadow: rgba(50, 50, 93, 0.25) 20px 20px 70px -10px inset, rgba(0, 0, 0, 0.3) 10px 10px 25px;
-     border: 10px solid $primary-color;
-
-    .numbers {
-        color: $primary-color;
-
+    background-color: $primary-color;
+  }
+  .numbers {
+    position: absolute;
+    color: $primary-color;
+    font-weight: bold;
+    text-align: center;
+    inset: 20px;
+  }
+  .number1 {
+    transform: rotate(30deg);
+    span {
+      display: block;
+      transform: rotate(-30deg);
     }
+  }
+  .number2 {
+    transform: rotate(60deg);
+    span {
+      display: block;
+      transform: rotate(-60deg);
+    }
+  }
+  .number3 {
+    transform: rotate(90deg);
+    span {
+      display: block;
+      transform: rotate(-90deg);
+    }
+  }
+  .number4 {
+    transform: rotate(120deg);
+    span {
+      display: block;
+      transform: rotate(-120deg);
+    }
+  }
+  .number5 {
+    transform: rotate(150deg);
+    span {
+      display: block;
+      transform: rotate(-150deg);
+    }
+  }
+  .number6 {
+    transform: rotate(180deg);
+    span {
+      display: block;
+      transform: rotate(-180deg);
+    }
+  }
+
+  .number7 {
+    transform: rotate(210deg);
+    span {
+      display: block;
+      transform: rotate(-210deg);
+    }
+  }
+  .number8 {
+    transform: rotate(240deg);
+    span {
+      display: block;
+      transform: rotate(-240deg);
+    }
+  }
+  .number9 {
+    transform: rotate(270deg);
+    span {
+      display: block;
+      transform: rotate(-270deg);
+    }
+  }
+  .number10 {
+    transform: rotate(300deg);
+    span {
+      display: block;
+      transform: rotate(-300deg);
+    }
+  }
+  .number11 {
+    transform: rotate(330deg);
+    span {
+      display: block;
+      transform: rotate(-330deg);
+    }
+  }
+  .number12 {
+    transform: rotate(0deg);
+    span {
+      display: block;
+      transform: rotate(0deg);
+    }
+  }
+
+  .hour {
+    position: absolute;
+    width: 3%;
+    height: 35%;
+    border-radius: 15px 15px 70% 70%;
+    background-color: $primary-color;
+    transform: translateY(-50px);
+  }
+  .minute {
+    position: absolute;
+    width: 2%;
+    height: 45%;
+    border-radius: 10px 10px 50% 50%;
+    background-color: $primary-color;
+    transform: translateY(-70px);
+  }
+  .second {
+    position: absolute;
+    width: 1%;
+    height: 50%;
+    border-radius: 25% 25% 50% 50%;
+    background-color: $secondary-color;
+    transform: translateY(-80px);
+    z-index: 1;
+  }
 }

@@ -1,85 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-.margin-1 {
-  margin: 1rem;
-}
-
-.marginY-1 {
-  margin: 1rem 0;
-}
-
-.padding-1 {
-  margin: 1rem;
-}
-
-.paddingY-1 {
-  margin: 1rem 0;
-}
-
-.margin-2 {
-  margin: 2rem;
-}
-
-.marginY-2 {
-  margin: 2rem 0;
-}
-
-.padding-2 {
-  margin: 2rem;
-}
-
-.paddingY-2 {
-  margin: 2rem 0;
-}
-
-.margin-3 {
-  margin: 3rem;
-}
-
-.marginY-3 {
-  margin: 3rem 0;
-}
-
-.padding-3 {
-  margin: 3rem;
-}
-
-.paddingY-3 {
-  margin: 3rem 0;
-}
-
-.margin-4 {
-  margin: 4rem;
-}
-
-.marginY-4 {
-  margin: 4rem 0;
-}
-
-.padding-4 {
-  margin: 4rem;
-}
-
-.paddingY-4 {
-  margin: 4rem 0;
-}
-
-.margin-5 {
-  margin: 5rem;
-}
-
-.marginY-5 {
-  margin: 5rem 0;
-}
-
-.padding-5 {
-  margin: 5rem;
-}
-
-.paddingY-5 {
-  margin: 5rem 0;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -87,7 +7,7 @@
 }
 
 body {
-  background-color: #eaeafb;
+  background-color: rgb(230, 230, 250);
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   height: 100vh;
@@ -100,13 +20,134 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   background-color: white;
-  height: 600px;
-  width: 600px;
+  height: clamp(500px, 50vw, 1000px);
+  width: clamp(500px, 50vw, 1000px);
   border-radius: 50%;
   box-shadow: rgba(50, 50, 93, 0.25) 20px 20px 70px -10px inset, rgba(0, 0, 0, 0.3) 10px 10px 25px;
-  border: 10px solid #1a1a1a;
+  border: 15px solid rgb(25.5, 25.5, 25.5);
+}
+.clock .clock-center {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(25.5, 25.5, 25.5);
 }
 .clock .numbers {
-  color: #1a1a1a;
+  position: absolute;
+  color: rgb(25.5, 25.5, 25.5);
+  font-weight: bold;
+  text-align: center;
+  inset: 20px;
+}
+.clock .number1 {
+  transform: rotate(30deg);
+}
+.clock .number1 span {
+  display: block;
+  transform: rotate(-30deg);
+}
+.clock .number2 {
+  transform: rotate(60deg);
+}
+.clock .number2 span {
+  display: block;
+  transform: rotate(-60deg);
+}
+.clock .number3 {
+  transform: rotate(90deg);
+}
+.clock .number3 span {
+  display: block;
+  transform: rotate(-90deg);
+}
+.clock .number4 {
+  transform: rotate(120deg);
+}
+.clock .number4 span {
+  display: block;
+  transform: rotate(-120deg);
+}
+.clock .number5 {
+  transform: rotate(150deg);
+}
+.clock .number5 span {
+  display: block;
+  transform: rotate(-150deg);
+}
+.clock .number6 {
+  transform: rotate(180deg);
+}
+.clock .number6 span {
+  display: block;
+  transform: rotate(-180deg);
+}
+.clock .number7 {
+  transform: rotate(210deg);
+}
+.clock .number7 span {
+  display: block;
+  transform: rotate(-210deg);
+}
+.clock .number8 {
+  transform: rotate(240deg);
+}
+.clock .number8 span {
+  display: block;
+  transform: rotate(-240deg);
+}
+.clock .number9 {
+  transform: rotate(270deg);
+}
+.clock .number9 span {
+  display: block;
+  transform: rotate(-270deg);
+}
+.clock .number10 {
+  transform: rotate(300deg);
+}
+.clock .number10 span {
+  display: block;
+  transform: rotate(-300deg);
+}
+.clock .number11 {
+  transform: rotate(330deg);
+}
+.clock .number11 span {
+  display: block;
+  transform: rotate(-330deg);
+}
+.clock .number12 {
+  transform: rotate(0deg);
+}
+.clock .number12 span {
+  display: block;
+  transform: rotate(0deg);
+}
+.clock .hour {
+  position: absolute;
+  width: 3%;
+  height: 35%;
+  border-radius: 15px 15px 70% 70%;
+  background-color: rgb(25.5, 25.5, 25.5);
+  transform: translateY(-50px);
+}
+.clock .minute {
+  position: absolute;
+  width: 2%;
+  height: 45%;
+  border-radius: 10px 10px 50% 50%;
+  background-color: rgb(25.5, 25.5, 25.5);
+  transform: translateY(-70px);
+}
+.clock .second {
+  position: absolute;
+  width: 1%;
+  height: 50%;
+  border-radius: 25% 25% 50% 50%;
+  background-color: rgb(255, 99, 71);
+  transform: translateY(-80px);
+  z-index: 1;
 }/*# sourceMappingURL=style.css.map */
